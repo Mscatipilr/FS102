@@ -12,50 +12,120 @@ Returns the winner object (null if no winner) */
 
 const hands = ['rock' , 'paper', 'scissors'];
 
-const getHand = () => hands[parseInt(Math.random()*10)%3];
+function getHand() {
+    return hands[parseInt(Math.random()*10)%3]};
     
-    /*{
-    parseInt(Math.random()*10)%3;
-    if (parseInt(Math.random()*10)%3 == 0) {
-        return hands[0];
-    } else if (parseInt(Math.random()*10)%3 == 1) {
-        return hands[1];
-    } else (parseInt(Math.random()*10)%3 == 2) {
-        return hands[2];
-    }
-}*/
 let player1 = {
     name: 'Jack',
-    hand: getHand()
-}
+    getHand: getHand,
+    wins: 0
+};
 
 let player2 = {
     name: 'Jill',
-    hand: getHand()
-}
+    getHand: getHand,
+    wins: 0
+};
 
-const playRound = (player1Name, player2Name) => {
-    player1.name = player1Name,
-    player2.name = player2Name,
-    console.log(`${player1.name} has ${player1.hand}.`);
-    console.log(`${player2.name} has ${player2.hand}.`);
+let player3 = {
+    name: 'Rosie',
+    getHand: getHand,
+    wins: 0
+};
+
+let player4 = {
+    name: 'Zendaya',
+    getHand: getHand,
+    wins: 0
+};
+
+function playRound(player1, player2) {
+    player1.hand = player1.getHand();
+    player2.hand = player2.getHand();
+
+    console.log(`${player1.name} plays ${player1.hand} and`);
+    console.log(`${player2.name} plays ${player2.hand}.`);
+
     if (player1.hand === player2.hand) {
-        return null,
-        console.log('It\'s a tie!');
+        console.log(`
+It's a tie!
+
+`);
+        return null;
     } else if (
         (player1.hand === 'rock' && player2.hand === 'scissors') ||
         (player1.hand === 'paper' && player2.hand === 'rock') ||
         (player1.hand === 'scissors' && player2.hand === 'paper')
     ) {
-        return {winner: player1.name, hand: player1.hand},
         console.log(`
-${player1.name} is the winner!`);
+${player1.name} wins this round!`);            
+        return {winner: player1, hand: player1.hand, player2Hand: player2.hand};
     } else {
-        return {winner: player2.name, hand: player2.hand},
         console.log(`
-${player2.name} is the winner!`);
-    }
+${player2.name} wins this round!`);
+        return {winner: player2, hand: player2.hand, player2Hand: player2.hand};
+      }
 
 }
 
-playRound('Tommy', 'Jo');
+//const test = playRound(player1, player2);
+
+let playUntil = 3;
+
+const playGame = (player1, player2, playUntil) => {
+    if (player1.wins === playUntil)  {
+        console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The final winner is ${player1.name} with ${player1.wins} wins!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`);
+        return player1;
+    } else if (player2.wins === playUntil) {
+        console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The final winner is ${player2.name} with ${player2.wins} wins!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`);
+        return player2;
+    } else {
+        const roundResult = playRound(player1, player2);
+        if (roundResult == null) {
+            console.log(`The score is ${player1.name}: ${player1.wins}, ${player2.name}: ${player2.wins}.
+        --            
+`);
+            return playGame(player1, player2, playUntil);
+        } else if (roundResult.winner === player1.name) {
+                player1.wins++;
+                console.log(`The score is ${player1.name}: ${player1.wins}, ${player2.name}: ${player2.wins}.
+            --            
+`);
+                return playGame(player1, player2, playUntil);
+            } else {
+                player2.wins++;
+                console.log(`The score is ${player1.name}: ${player1.wins}, ${player2.name}: ${player2.wins}.
+            --            
+`);
+                return playGame(player1, player2, playUntil);
+            }
+        }
+}
+
+
+//const finalWinner = playGame(player1, player2, playUntil);
+
+
+
+const playTournament = (player1, player2, player3, player4, playUntil) => {
+    player1.wins = 0;
+    player2.wins = 0;
+    player3.wins = 0;
+    player4.wins = 0;
+    
+    const winner1 = playGame(player1, player2, playUntil);
+    const winner2 = playGame(player3, player4, playUntil);
+
+    const tournamentWinner = playGame(winner1, winner2, playUntil);
+
+    console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${tournamentWinner.name} is the world champion!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`);
+}
+
+playTournament(player1, player2, player3, player4, 3);
