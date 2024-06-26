@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NH Animals in Need</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+        background-color: rgba(177,184,167,255);
+    }
+    .navbar-brand {
+        font-family: "Aclonica", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    h2 {
+    font-family: "Aclonica", sans-serif;
+    }
+    h5 {
+        font-family: "Aclonica", sans-serif;
+    }
+    #hero {
+        height: 300px; /* Adjust height as needed */
+        position: relative;
+    }
+  
+    .hero-images {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+    }
+  
+    .hero-image {
+        flex: 1 0 100%; /* Ensure each image takes full width on small screens */
+        background-size: cover;
+        background-position: center;
+    }
+  
+  .hero-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    padding: 20px;
+  }
+  
+  /* Adjustments for larger screens */
+  @media (min-width: 501px) {
+    .hero-image {
+      flex: 1; 
+      height: auto;
+    }
+  }
+    @media (max-width: 500px) {
+      .hero-image:nth-child(2) { display: none; }
+      .hero-image:nth-child(3) { display: none; }
+      .hero-image:nth-child(4) { display: none; }
+      .hero-content {
+        transform: translate(-50%, -50%);
+      }
+    }
+    .card {
+        background-color: rgba(177,184,167,255);
+        border: 0;
+    }
+    .card-body {
+        color: white;
+        background-color: #343a40;
+        border-radius: 10%;
+    }
+    .card-body img{
+        width: 100%;
+        border-radius: 10%;
+    }
+    
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">New Hanover's Animals<span style="font-size: medium;"><br><i>in need</i></span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#adopt">Adopt</a></li>
+      <li class="nav-item"><a class="nav-link" href="#volunteer">Volunteer</a></li>
+      <li class="nav-item"><a class="nav-link" href="#donate">Donate</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="container-fluid text-center p-0 position-relative" >
+    <div class="hero-images row no-gutters">
+      <div class="hero-image col-12 col-md-3" style="background-image: url('https://pet-uploads.adoptapet.com/8/0/5/1133990112.jpg');"></div>
+      <div class="hero-image col-12 col-md-3" style="background-image: url('https://pet-uploads.adoptapet.com/3/d/e/1132962179.jpg');"></div>
+      <div class="hero-image col-12 col-md-3" style="background-image: url('https://pet-uploads.adoptapet.com/f/0/c/1133211272.jpg');"></div>
+      <div class="hero-image col-12 col-md-3" style="background-image: url('https://pet-uploads.adoptapet.com/6/d/c/1123651947.jpg');"></div>
+    </div>
+    <div class="hero-content position-absolute w-100 text-white d-flex flex-column align-items-center justify-content-center">
+      <h1 style="text-shadow: 3px 3px 0px rgba(0, 0, 0);">Help Us Find Loving Homes for Our Furry Friends</h1>
+      <a href="#adopt" class="btn btn-danger mt-3">Adopt Today</a>
+    </div>
+  </section>
+  
+
+<!-- About Section -->
+<section id="about" class="container my-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>About Us</h2>
+      <p>We have been dedicated to rescuing and rehoming animals since 2020. Our mission is to provide a safe haven for animals in need and find them loving homes.</p>
+    </div>
+    <div class="col-md-6">
+      <img src="https://media.istockphoto.com/id/1345007530/photo/young-woman-in-animal-shelter.jpg?s=612x612&w=0&k=20&c=4fkUStW8O3IKvkNw8OyOUsoB8Z-mDkUjR7QFLbuyDig=" class="img-fluid" alt="About us image" style="border-radius: 10%;">
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="container my-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <img src="https://media.istockphoto.com/id/1206243815/photo/puppy-dog-in-a-shelter-adoption.jpg?s=612x612&w=0&k=20&c=_ONmW2bUZ6BZAcCZba_zS-42x3KFpxNJjqZ2rZTERG8=" class="mb-3" alt="Adoption Icon">
+          <h5 class="card-title">Adoption</h5>
+          <p class="card-text">Find your new best friend among our available pets. Give them the loving home they deserve.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <img src="https://media.istockphoto.com/id/1283919781/photo/people-feeding-newborn-cute-kitten-cat-by-bottle-of-milk.jpg?s=612x612&w=0&k=20&c=ynQ9QcK5MhtmZwbQplUgVQQa69DJY3y_QkdXsswJDkE=" class="mb-3" alt="Volunteer Icon">
+          <h5 class="card-title">Volunteering</h5>
+          <p class="card-text">Join our team of dedicated volunteers and make a difference in the lives of our animals.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <img src="https://media.istockphoto.com/id/1352298727/photo/animal-shelter-donations-volunteer-hands-holding-box-with-canned-pet-food-blankets-animal.jpg?s=612x612&w=0&k=20&c=0Ipgjy92tDQ5cLlsMAolN1TTw8It45S93Y93HRZaJQY=" class="mb-3" alt="Donate Icon">
+          <h5 class="card-title">Donations</h5>
+          <p class="card-text">Your generous donations help us provide care and shelter for our animals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+  <h2>Contact Us</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="subject">Subject:</label>
+      <input type="text" class="form-control" id="subject" name="subject" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <p>Contact us at: (910) 555-1234 | info@wilmingtonanimalshelter.org</p>
+  <div class="social-media">
+    <a href="#"><img src="icons8-facebook-48.png" alt="Facebook" class="mr-2"></a>
+    <a href="#"><img src="icons8-twitterx-50.png" alt="Twitter" class="mr-2"></a>
+    <a href="#"><img src="icons8-instagram-48.png" alt="Instagram"></a>
+  </div>
+  <p>&copy; 2024 Wilmington Animal Shelter. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+  

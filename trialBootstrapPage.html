@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wilmington Animal Shelter</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Wilmington Animal Shelter</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#adopt">Adopt</a></li>
+      <li class="nav-item"><a class="nav-link" href="#volunteer">Volunteer</a></li>
+      <li class="nav-item"><a class="nav-link" href="#donate">Donate</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="container-fluid text-center p-0 position-relative">
+    <div class="row no-gutters">
+      <div class="col-md-3"><img src="https://pet-uploads.adoptapet.com/8/0/5/1133990112.jpg" class="img-fluid" alt="Animal 1"></div>
+      <div class="col-md-3"><img src="https://pet-uploads.adoptapet.com/3/d/e/1132962179.jpg" class="img-fluid" alt="Animal 2"></div>
+      <div class="col-md-3"><img src="https://pet-uploads.adoptapet.com/f/0/c/1133211272.jpg" class="img-fluid" alt="Animal 3"></div>
+      <div class="col-md-3"><img src="https://pet-uploads.adoptapet.com/6/d/c/1123651947.jpg" class="img-fluid" alt="Animal 4"></div>
+    </div>
+    <div class="hero-content position-absolute w-100 text-white d-flex flex-column align-items-center justify-content-center" style="top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5);">
+      <h1>Help Us Find Loving Homes for Our Furry Friends</h1>
+      <a href="#adopt" class="btn btn-danger mt-3">Adopt Today</a>
+    </div>
+  </section>
+  
+
+<!-- About Section -->
+<section id="about" class="container my-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>About Us</h2>
+      <p>The Wilmington Animal Shelter has been dedicated to rescuing and rehoming animals since [Year]. Our mission is to provide a safe haven for animals in need and find them loving homes.</p>
+    </div>
+    <div class="col-md-6">
+      <img src="path/to/about-image.jpg" class="img-fluid" alt="About us image">
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="container my-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <img src="path/to/adoption-icon.png" class="mb-3" alt="Adoption Icon">
+          <h5 class="card-title">Adoption</h5>
+          <p class="card-text">Find your new best friend among our available pets. Give them the loving home they deserve.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <img src="path/to/volunteer-icon.png" class="mb-3" alt="Volunteer Icon">
+          <h5 class="card-title">Volunteering</h5>
+          <p class="card-text">Join our team of dedicated volunteers and make a difference in the lives of our animals.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <img src="path/to/donate-icon.png" class="mb-3" alt="Donate Icon">
+          <h5 class="card-title">Donations</h5>
+          <p class="card-text">Your generous donations help us provide care and shelter for our animals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container my-5">
+  <h2>Contact Us</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="subject">Subject:</label>
+      <input type="text" class="form-control" id="subject" name="subject" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <p>Contact us at: (910) 555-1234 | info@wilmingtonanimalshelter.org</p>
+  <div class="social-media">
+    <a href="#"><img src="path/to/facebook-icon.png" alt="Facebook" class="mr-2"></a>
+    <a href="#"><img src="path/to/twitter-icon.png" alt="Twitter" class="mr-2"></a>
+    <a href="#"><img src="path/to/instagram-icon.png" alt="Instagram"></a>
+  </div>
+  <p>&copy; 2024 Wilmington Animal Shelter. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
